@@ -239,34 +239,6 @@ O projeto usa **SQLite** com três tabelas:
 
 ---
 
-## 🧪 Testando com curl
-
-```bash
-# 1. Cadastrar
-curl -X POST http://localhost:8000/clientes \
-  -H "Content-Type: application/json" \
-  -d '{"nome": "João", "email": "joao@email.com", "senha": "minhasenha123"}'
-
-# 2. Login — copie o access_token da resposta
-curl -X POST http://localhost:8000/login \
-  -H "Content-Type: application/json" \
-  -d '{"email": "joao@email.com", "senha": "minhasenha123"}'
-
-# 3. Criar conta (substitua SEU_TOKEN)
-curl -X POST http://localhost:8000/contas \
-  -H "Authorization: Bearer SEU_TOKEN"
-
-# 4. Depositar
-curl -X POST http://localhost:8000/contas/depositar \
-  -H "Authorization: Bearer SEU_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"valor": 500.0}'
-
-# 5. Extrato
-curl http://localhost:8000/contas/extrato \
-  -H "Authorization: Bearer SEU_TOKEN"
-```
-
 ---
 
 ## ⚠️ Observações importantes
