@@ -1,0 +1,22 @@
+[project]
+name = "api-bancaria-assincrona"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Guilherme",email = "guilhermemmatos07@gmail.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "passlib[bcrypt] (>=1.7.4,<2.0.0)",
+    "fastapi (>=0.136.1,<0.137.0)",
+    "jwt (>=1.4.0,<2.0.0)",
+    "aiosqlite (>=0.22.1,<0.23.0)",
+    "python-jose[cryptography] (>=3.5.0,<4.0.0)",
+    "uvicorn[standard] (>=0.46.0,<0.47.0)",
+    "bcrypt (==4.0.1)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
